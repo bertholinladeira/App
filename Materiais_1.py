@@ -11,7 +11,7 @@ d = {'Material':[' '], 'Descrição':[' '], 'Característica1': [' '], 'Caracter
 r = pd.DataFrame(d)
 
 
-st.image('https://seekvectorlogo.com/wp-content/uploads/2018/03/saint-gobain-vector-logo.png',width=150)
+
 st.title('Materiais duplicados e com características diferentes')
 st.sidebar.markdown("**Instruções para o usuário**")
 st.sidebar.write('*Há dois tipos de análises, materiais duplicados e materiais da mesma família com carecterísticas diferentes,  \n o arquivo anexo deve mudar de acodo com a opção escolhida.  \n Para materiais duplicados o arquivo deve estar com as seguintes colunas: Material e Descrição  \n Ex.*', r[['Material','Descrição']], '*Para materiais da mesma família com características diferentes o arquivo deve estar com as seguintes colunas: Material, Descrição e Colunas com as características a serem analizadas.  \n Ex.*', r)
