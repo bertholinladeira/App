@@ -110,7 +110,9 @@ if upload is not None:
         y = pd.DataFrame(y)
         dfx = pd.merge(y, g,  how='left', on=['Descrição'])
         p = dfx.reset_index()
-        c = p.copy().groupby(['Descrição',Coluna+"_y"])[Coluna+"_x"].max()
+        jkl = Coluna+'_y'
+        jkl2 = Coluna+'_x'
+        c = p.groupby(['Descrição',jkl])[jkl2].max()
         v = pd.DataFrame(c).reset_index()
         dfb = pd.merge(df, v,  how='left', on=['Descrição'])
 
