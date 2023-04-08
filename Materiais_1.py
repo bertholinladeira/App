@@ -111,8 +111,7 @@ if upload is not None:
         dfx = pd.merge(y, g,  how='left', on=['Descrição'])
         dfx.rename(columns = {dfx.columns.values[1]:Coluna+'_x'}, inplace = True)
         dfx.rename(columns = {dfx.columns.values[3]:Coluna+'_y'}, inplace = True)
-        p = dfx.reset_index()
-        c = p.groupby(['Descrição',Coluna+'_y'])[Coluna+'_x'].max()
+        c = dfx.groupby(['Descrição',Coluna+'_y'])[Coluna+'_x'].max()
         v = pd.DataFrame(c).reset_index()
         dfb = pd.merge(df, v,  how='left', on=['Descrição'])
 
