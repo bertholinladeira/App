@@ -248,7 +248,7 @@ if upload is not None:
         df14.to_excel('Campos_diferentes.xlsx', index = False)
         st.download_button(
             label="Download data as xlsx",
-            data=df4,
+            data=df14,
             file_name='Campos_diferentes.xlsx',
             mime='text/xlsx',)
 #else:
