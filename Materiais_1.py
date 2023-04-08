@@ -250,7 +250,7 @@ if upload is not None:
             label="Download data as xlsx",
             data=df4,
             file_name='Campos_diferentes.xlsx',
-            mime='text/xlsx',
+            mime='text/xlsx',)
 #else:
     #run3 = st.button("Instruções para o usuário")
     #if run3 == True:
