@@ -98,7 +98,7 @@ if upload is not None:
         y = df.groupby(['Descrição'])[Coluna].value_counts()
         y1 = df.groupby('Descrição').count().reset_index()
         y2 = y1[['Descrição','Material']]
-        y2['Descrição'] = y2['Descrição'].str.lower().str.split(' ')
+        y2.loc[:]['Descrição'] = y2['Descrição'].str.lower().str.split(' ')
        
         
         g = df.groupby(['Descrição'])[Coluna].apply(pd.Series.mode)
